@@ -1,10 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.IO;
-using System.Threading;
-
-namespace FolderCleaning
+﻿namespace FolderCleaning
 {
+    using System;
+    using System.ComponentModel;
+    using System.IO;
+    using System.Threading;
+
     /// <summary>
     /// Periodically cleans up a folder.
     /// </summary>
@@ -79,12 +79,15 @@ namespace FolderCleaning
             lock (_cleanLock)
             {
                 var now = DateTime.Now;
-                foreach (var filepath in Directory.GetFiles(FolderPath))
+                if (Directory.Exists(FolderPath))
                 {
-                    var file = new FileInfo(filepath);
-                    var timestamp = GetTimestamp(file);
-                    var lifetime = now - timestamp;
-                    if (lifetime >= MinimumFileLifetime) file.Delete();
+                    foreach (var filepath in Directory.GetFiles(FolderPath))
+                    {
+                        var file = new FileInfo(filepath);
+                        var timestamp = GetTimestamp(file);
+                        var lifetime = now - timestamp;
+                        if (lifetime >= MinimumFileLifetime) file.Delete();
+                    }
                 }
             }
         }
