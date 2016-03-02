@@ -1,7 +1,6 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderCleaner", "FolderCleaner\FolderCleaner.csproj", "{2D7DFE3E-836B-4AD9-A115-4AB4D3736AD1}"
+﻿Microsoft Visual Studio Solution File, Format Version 11.00
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{2D7DFE3E-836B-4AD9-A115-4AB4D3736AD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

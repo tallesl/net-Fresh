@@ -1,23 +1,23 @@
-﻿namespace FolderCleaning
+﻿namespace FreshLibrary
 {
     /// <summary>
     /// File available timestamps.
     /// </summary>
-    public enum FileTimestamps
+    public enum FileTimestamp
     {
         /// <summary>
-        /// Date of the file creation.
+        /// Date of file's creation.
         /// </summary>
         Creation,
 
         /// <summary>
-        /// Date of the last access of the file.
+        /// Date of file's last access.
         /// </summary>
         LastAccess,
 
         /// <summary>
-        /// Date of the last write of the file.
+        /// Date of file's last write.
         /// </summary>
-        LastWrite
+        LastWrite,
     }
 }
